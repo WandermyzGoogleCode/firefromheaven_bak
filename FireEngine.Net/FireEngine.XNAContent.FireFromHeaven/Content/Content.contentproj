@@ -1,0 +1,129 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>376047aa-ec61-45d6-a7ae-264888cdb1b5</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v3.1</XnaFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=3.1.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sample.jpg">
+      <Name>sample</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FireML\Plot\FireMLFuncTester.fmlplot">
+      <Name>FireMLFuncTester</Name>
+      <Importer>FireMLPlotImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FireMLBak\FireMLTester.xml.bak">
+      <Name>FireMLTester.xml</Name>
+      <Importer>FireMLImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FireML\FireML.fml">
+      <Name>FireML</Name>
+      <Importer>FireMLAssemblyImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="FireML\Asset\FireMLAssetTester.fmlasset">
+      <Name>FireMLAssetTester</Name>
+      <Importer>FireMLAssetImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <None Include="FireML\XSD\FireML.xsd">
+      <Name>FireML</Name>
+    </None>
+    <None Include="FireML\XSD\FireMLAsset.xsd">
+      <Name>FireMLAsset</Name>
+    </None>
+    <None Include="FireML\XSD\FireMLFuncExt.xsd">
+      <Name>FireMLFuncExt</Name>
+    </None>
+    <None Include="FireML\XSD\FireMLTypes.xsd">
+      <Name>FireMLTypes</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FireEngine.XNAContentPipeline\FireEngine.XNAContentPipeline.csproj">
+      <Project>{9B387D3E-DA93-42F2-B70B-85FA07ACC6E2}</Project>
+      <Name>FireEngine.XNAContentPipeline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FireML\Plot\FireMLAtomTester.fmlplot">
+      <Name>FireMLAtomTester</Name>
+      <Importer>FireMLPlotImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+    <Compile Include="FireML\Plot\ClannadSample.fmlplot">
+      <Name>ClannadSample</Name>
+      <Importer>FireMLPlotImporter</Importer>
+    </Compile>
+    <Compile Include="FireML\Asset\ClannadSample.fmlasset">
+      <Name>ClannadSample</Name>
+      <Importer>FireMLAssetImporter</Importer>
+    </Compile>
+    <Compile Include="FireML\Plot\窘.fmlplot">
+      <Name>窘</Name>
+      <Importer>FireMLPlotImporter</Importer>
+    </Compile>
+    <None Include="FireML\XSD\FireMLDataExt.xsd">
+      <Name>FireMLDataExt</Name>
+    </None>
+    <None Include="FireML\XSD\FireMLAssetExt.xsd">
+      <Name>FireMLAssetExt</Name>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>echo FireML Assembly File - FireEngine &gt; $(ProjectDir)FireML\FireML.fml
+$(SolutionDir)\FireEngine.Utilities.FuncXSDGenerator\bin\Debug\FireEngine.Utilities.FuncXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLFuncExt.xsd $(ProjectDir)\FireML\
+$(SolutionDir)\FireEngine.Utilities.AssetXSDGenerator\bin\Debug\FireEngine.Utilities.AssetXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLAssetExt.xsd $(ProjectDir)\FireML\</PreBuildEvent>
+  </PropertyGroup>
+</Project>

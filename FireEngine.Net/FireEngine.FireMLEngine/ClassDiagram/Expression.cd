@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FireEngine.FireMLEngine.Expr.Expression" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\Expression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.AddExpr" Collapsed="true">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\AddExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.VarRef" Collapsed="true">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\VarRef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.AndExpr" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\AndExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.AssignExpr" Collapsed="true">
+    <Position X="35.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\AssignExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.BinaryAlgoExpr" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\BinaryAlgoExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.BinaryCmpExpr" Collapsed="true">
+    <Position X="27.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\BinaryCmpExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.BinaryLogicExpr" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\BinaryLogicExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.DivExpr" Collapsed="true">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\DivExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.EquExpr" Collapsed="true">
+    <Position X="26.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\EquExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.FloatConst" Collapsed="true">
+    <Position X="7.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Expr\FloatConst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.GreatEquExpr" Collapsed="true">
+    <Position X="31" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\GreatEquExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.GreatExpr" Collapsed="true">
+    <Position X="22" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\GreatExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.IntConst" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Expr\IntConst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.LeftValue" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Expr\LeftValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.LeftValueExpr" Collapsed="true">
+    <Position X="35.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Expr\LeftValueExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.LessEquExpr" Collapsed="true">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\LessEquExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.LessExpr" Collapsed="true">
+    <Position X="33.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\LessExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.MulExpr" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\MulExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.NegativeExpr" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Expr\NegativeExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.NeqExpr" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\NeqExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.NotExpr" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Expr\NotExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.OrExpr" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\OrExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.PowExpr" Collapsed="true">
+    <Position X="19.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\PowExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.RightValue" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\RightValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.RightValueExpr" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\RightValueExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.StringConst" Collapsed="true">
+    <Position X="5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Expr\StringConst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.SubExpr" Collapsed="true">
+    <Position X="17.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\SubExpr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.Expr.Value" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Expr\Value.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FireEngine.FireMLEngine.Expr.DataType" Collapsed="true">
+    <Position X="38" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAAAAAAAgACA=</HashCode>
+      <FileName>Expr\DataType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

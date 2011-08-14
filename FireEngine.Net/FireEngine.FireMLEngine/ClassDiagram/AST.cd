@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FireEngine.FireMLEngine.AST.ASTNode" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAgAAAAAIEQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ASTNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.FireMLRoot">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAAAACAACAAAAACAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>AST\FireMLRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ActionLayerDef">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ActionLayerDef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.SwitchStmt">
+    <Position X="25.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAACAAAAEAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST\SwitchStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ActorStmt">
+    <Position X="32" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAABAQAAAAAAAgAAQAAAQAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>AST\ActorStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.BackgroundStmt">
+    <Position X="41" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AST\BackgroundStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.BreakStmt">
+    <Position X="47.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\BreakStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ContinueStmt">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ContinueStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.Definition" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\Definition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.DialogStmt">
+    <Position X="34.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>AST\DialogStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.EchoStmt">
+    <Position X="43.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST\EchoStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ExpressionStmt">
+    <Position X="50" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ExpressionStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.FunctionCallStmt">
+    <Position X="20.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAIAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\FunctionCallStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.FunctionDef">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAACAA=</HashCode>
+      <FileName>AST\FunctionDef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.IfStmt">
+    <Position X="36.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>AST\IfStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.IncludeStmt">
+    <Position X="45.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>AST\IncludeStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.LoopStmt">
+    <Position X="52.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\LoopStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.MusicStmt">
+    <Position X="23" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAgCAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AST\MusicStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.MusicStopStmt">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\MusicStopStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.MusicVolStmt">
+    <Position X="38.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\MusicVolStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.PlotDef">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\PlotDef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ReturnStmt">
+    <Position X="54.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ReturnStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.SelectOption">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>AST\SelectOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.SelectStmt">
+    <Position X="29.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>AST\SelectStmt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.Statement" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\Statement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.ParameterDef">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\ParameterDef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.Position">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>AST\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.IfBlock" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgCAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\IfBlock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.FireMLEngine.AST.SwitchCase" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>AST\SwitchCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FireEngine.FireMLEngine.AST.IASTVisitor" Collapsed="true">
+    <Position X="57" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST\IASTVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

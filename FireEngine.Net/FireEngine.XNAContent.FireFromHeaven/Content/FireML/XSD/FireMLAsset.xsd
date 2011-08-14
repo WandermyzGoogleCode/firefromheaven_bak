@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <xs:include schemaLocation="FireMLTypes.xsd"/>
+  <xs:include schemaLocation="FireMLDataExt.xsd"/>
+
+  <xs:element name="FireMLAsset" nillable="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Music" type="MusicAsset">
+          <xs:annotation>
+            <xs:documentation>定义一个音乐资源</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="Actor" type="ActorAsset">
+          <xs:annotation>
+            <xs:documentation>定义一个立绘资源</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="CG" type="CGAsset">
+          <xs:annotation>
+            <xs:documentation>定义一个CG资源</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="Video" type="VideoAsset">
+          <xs:annotation>
+            <xs:documentation>定义一个视频资源</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

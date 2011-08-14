@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+
+  <!--Custom Type-->
+  <xs:simpleType name="ContentRef">
+    <xs:restriction base="xs:anyURI">
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ActorContentRef">
+    <xs:restriction base="ContentRef"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="CGContentRef">
+    <xs:restriction base="ContentRef"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="MusicContentRef">
+    <xs:restriction base="ContentRef"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="VideoContentRef">
+    <xs:restriction base="ContentRef"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="AssetRef">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+ 
+  <xs:simpleType name="FunctionName">
+    <xs:restriction base="xs:NCName"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="SubPlotName">
+    <xs:restriction base="xs:NCName"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="VarRef">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\$[^\d]?(\w)*"/>
+      <!--有BUG！-->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="FormalParameters">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\$[^\d]?(\w)*)(,\s*\$[^\d]?(\w)*)*"/>
+      <!--有BUG！-->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="Expression">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ExpressionBlock">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ActualParameters">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ParameterType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto">
+        <xs:annotation>
+          <xs:documentation>自动将参数识别为String, Int, Float或Bool中的一个</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="String"/>
+      <xs:enumeration value="Int"/>
+      <xs:enumeration value="Float"/>
+      <xs:enumeration value="Bool"/>
+      <xs:enumeration value="Expression">
+        <xs:annotation>
+          <xs:documentation>
+            将参数按照表达式解析。这时，表达式中的字符串要用双引号（转义符为&amp;quot;）引起来
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--
+  <xs:simpleType name="AssetAccess">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Hidden">
+        <xs:annotation>
+          <xs:documentation>从不显示在Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FirstMeet">
+        <xs:annotation>
+          <xs:documentation>第一次出现后加入Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Always">
+        <xs:annotation>
+          <xs:documentation>始终在Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  -->
+
+  <!--
+  <xs:complexType name="AssetBase">
+    <xs:attribute name="name" use="required" type ="xs:string">
+      <xs:annotation>
+        <xs:documentation>资源的名称（用于在脚本中引用）</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="access" default="Hidden" type="AssetAccess">
+      <xs:annotation>
+        <xs:documentation>资源文件是否显示在Gallery中</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  -->
+  
+</xs:schema>

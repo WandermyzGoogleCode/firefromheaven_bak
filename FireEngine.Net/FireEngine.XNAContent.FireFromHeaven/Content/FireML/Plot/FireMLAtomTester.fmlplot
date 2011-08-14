@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
+
+  <MainPlot>
+    <select return="$功能选择">
+      test
+      cold
+      窘
+    </select>
+
+    <bg asset="video1"/>
+
+    <switch expr="$功能选择">
+      <case value="0">
+        <include SubPlot="test"/>
+      </case>
+      <case value="1">
+        <include SubPlot="cold"/>
+      </case>
+      <case value="2">
+        <include SubPlot="窘"/>
+      </case>
+    </switch>
+  </MainPlot>
+
+  <SubPlot name="test">
+    表达式：1+2+3 = ?
+    <echo>1+2+3</echo>
+    
+    字符串：
+    <expr>
+      $a = "Hello";
+      $b = "World!";
+    </expr>
+    <echo>$a + $b</echo>
+    
+    嵌入式变量：
+    <expr>$root = "img/"</expr>
+    <actor img="{$root}ying.png" name="英"/>
+    
+    循环5次：
+    <expr>$counter = 1</expr>
+    <loop cond="$counter &lt;= 5">
+      第{$counter}次循环
+      <expr>$counter = $counter + 1</expr>
+    </loop>
+  </SubPlot>
+  
+  <SubPlot name="cold">
+    <music asset="奇怪的东西" fadeIn="0.5"/>
+
+    <bg img = "test2/bg01.jpg"/>
+    <英/>对了大俄啊……
+    <伊娥 par = "“俄狄浦斯”, fa01nm"/>……我说，你们兄妹俩是日本人吗？（大鲁迅全集……）
+    <英/>等一下，为什么是伊俄代替俄底浦斯？
+    <伊娥/>对不起，但是作者说俄底浦斯还没有画出来，所以……
+    <英/>好吧，那就只能凑合了，继续……
+    <黎 showname = "“义”"/>问题是，我和英的名字不能这么称呼啊。会引起歧义的。
+    <英/>再等一下啊！俄底浦斯也就罢了，怎么连我的义都是山寨版的！
+    <黎 par = "黎, fa03sy, asr"/>呜呜，英好无情啊……人家好不容易出场的说……
+    <伊娥/>对不起，但是作者说,义也没画出来……作者说他们很抱歉……
+    <英/>好，好吧……这个也凑合了……不画画就不要做游戏测试啊……
+    <伊娥 showname = "“俄底浦斯”"/>请问，刚才义说会引起歧义，这是为什么呢？
+    <actor/>这里，因为伊俄太有礼貌，无法说出“为什么？！”这种台词……
+    <英/>那个，伊俄，剧本上好像不是这么写的……
+    <伊娥 img = "fa01lg"/>对，对不起……呜呜……
+    <英/>那么，就只好这样了……！！
+
+    <musicVol amplitude="1.5" transition="0.3"/>
+    
+
+    <select return = "$xuanzezhi">
+      淘汰伊娥
+      可怜伊娥
+    </select>
+
+    <musicStop/>
+
+    <switch expr="$xuanzezhi">
+      <case value="0">
+        <英/>伊俄，对不起，请把潘叫过来……
+        <伊娥/>对，对不起……呜呜……不要淘汰我……
+        <小潘/>伊俄，抱歉，但是作者强行让我登入了……
+        <英/>好了同志们，要快啊！片场租金很贵的
+        <小潘 showname = "“俄狄浦斯”"/>为什么？！
+        <actor/>这里，潘多拉以迅雷的速度入戏了……
+        <黎 par = ", fa03sr, asr"/>好！好气势！不愧是我的潘！
+        <伊娥/>为什么黎就可以说错话呜……
+        <英/>当然是因为只有这一个男性画好了……
+        <伊娥 img = "fa01lg"/>呜呜……
+        <黎 avatar = "asr"/>不好了！作者说时间不够，让我们赶紧结束呜……
+        <英/>难，难道，换人是个错误……！
+        <badend/>
+      </case>
+      <case value="1">
+        <英/>伊俄，好吧，再给你一次机会！一定要加油啊~
+        <伊娥/>为什么？！
+        <黎 par = ", fa03sy, asr"/>好！好气势！不愧是我的伊俄！
+        <黎 showname = "“义”"/>因为，你看，“大义凛然”是个成词，这样显得我太凛然了，不好……（旁白：凛然的义~）而大英呢……
+        <伊娥 showname = "“俄狄浦斯”" img = "fa01nm"/>大英呢？
+        <黎 par = "“义”,fa03sm,asm"/>众所周知，大英，就是传说中的 大 学 英 语 啊。
+        <伊娥 par = "“俄狄浦斯”, fa01lg"/>……那我也是大学俄语啊！！呜呜……
+        <黎 par = "“义”,fa03sm,asm"/>……对不起，我本来就是苏联人，没有大学俄语这种概念……
+        <英/>……你们两个啊！给我好好开会！
+        …………………………
+        什么……我们成功了！GE达成~~~
+        <goodend/>
+      </case>
+    </switch>
+  </SubPlot>
+
+</FireML>

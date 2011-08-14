@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FireEngine.GameEngine.UIFramework.UIElement">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAFABAAAAgABBEQFAAAAAAACBBAAAAAAAAAgA=</HashCode>
+      <FileName>UIFramework\UIElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.Visual">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\Visual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.Control" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\UIContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.ContentControl">
+    <Position X="4" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>UIFramework\Container.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.Screen" Collapsed="true">
+    <Position X="1.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Screen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.Canvas" Collapsed="true">
+    <Position X="4" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Canvas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.Grid" Collapsed="true">
+    <Position X="6.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Grid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.VisualCollection" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\VisualCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Shapes.Shape" Collapsed="true">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shapes\Shape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Shapes.Rectangle" Collapsed="true">
+    <Position X="15.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shapes\Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.LayoutProperties" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\LayoutProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.GridLayoutProperties">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAgABAAAAAAAAABgEAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\GridLayoutProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.CanvasLayoutProperties">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\CanvasLayoutProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.Thickness" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAACACAAAAAAAA=</HashCode>
+      <FileName>UIFramework\Thickness.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.PictureBox" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAIAA=</HashCode>
+      <FileName>Controls\PictureBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.Button" Collapsed="true">
+    <Position X="10.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Controls.TextBox" Collapsed="true">
+    <Position X="13" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.DependencyObject">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\DependencyObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.DependencyProperty" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\DependencyProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.UIFramework.VisualAssembler" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\VisualAssembler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FireEngine.GameEngine.UIFramework.HitTestStrategy" Collapsed="true">
+    <Position X="17.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIFramework\HitTestStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

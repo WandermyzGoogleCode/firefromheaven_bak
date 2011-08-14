@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--请将此文件移动到工程中的Content/FireML/Plot目录下-->
+<FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <!--TODO:
+    <MainPlot>    定义主情节
+    <SubPlot>     定义子情节，它可以被主情节包含
+    <Function>    定义函数
+    <ActionLayer> 定义角色图层
+  -->
+
+  <Function name="窘" doc ="打印N个窘">
+    <para name="$数" default="5" doc="打印数量"/>
+    <funcdef>
+      <loop cond="$数 > 0">
+        <expr>$数 = $数-1</expr>
+        窘
+      </loop>
+    </funcdef>
+  </Function>
+  
+  <SubPlot name="窘">
+    窘
+    囧
+    炯
+    o(╯□╰)o
+    <窘 数 ="10"/>
+
+  </SubPlot>
+</FireML>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <xs:include schemaLocation="FireMLTypes.xsd" />
+  <xs:simpleType name="ActorAssetRef">
+    <xs:union memberTypes="AssetRef">
+      <xs:simpleType>
+        <xs:restriction base="AssetRef">
+          <xs:enumeration value="asdfasd">
+            <xs:annotation>
+              <xs:documentation>weqrwreq</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="CGAssetRef">
+    <xs:union memberTypes="AssetRef">
+      <xs:simpleType>
+        <xs:restriction base="AssetRef">
+          <xs:enumeration value="nagisa1_1">
+            <xs:annotation>
+              <xs:documentation>cg/nagisa1_1.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="nagisa1_2">
+            <xs:annotation>
+              <xs:documentation>cg/nagisa1_2.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="nagisa1_3">
+            <xs:annotation>
+              <xs:documentation>cg/nagisa1_3.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CG测试1">
+            <xs:annotation>
+              <xs:documentation>/CG/pic1.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CG测试2">
+            <xs:annotation>
+              <xs:documentation>/CG/pic2.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CG测试3">
+            <xs:annotation>
+              <xs:documentation>dsaadff</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="newTest">
+            <xs:annotation>
+              <xs:documentation>qwerweq.jpg</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="MusicAssetRef">
+    <xs:union memberTypes="AssetRef">
+      <xs:simpleType>
+        <xs:restriction base="AssetRef">
+          <xs:enumeration value="1-04 町, 時の流れ, 人">
+            <xs:annotation>
+              <xs:documentation>music/music1.mp3</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="1-05 渚">
+            <xs:annotation>
+              <xs:documentation>music/music2.mp3</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="一切">
+            <xs:annotation>
+              <xs:documentation>/Music/一切献给你.mp3</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LRCSample">
+            <xs:annotation>
+              <xs:documentation>/Music/LRCSample.mp3</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="VideoAssetRef">
+    <xs:union memberTypes="AssetRef">
+      <xs:simpleType>
+        <xs:restriction base="AssetRef">
+          <xs:enumeration value="video1">
+            <xs:annotation>
+              <xs:documentation>asdfad</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+</xs:schema>

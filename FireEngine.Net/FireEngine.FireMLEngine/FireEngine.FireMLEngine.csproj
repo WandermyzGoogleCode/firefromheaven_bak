@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E27CC161-1475-45D9-BF96-2251B445FE84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FireEngine.FireMLEngine</RootNamespace>
+    <AssemblyName>FireEngine.FireMLEngine</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AST\AssetDef.cs" />
+    <Compile Include="AST\ASTRecursor.cs" />
+    <Compile Include="AST\DataStmt.cs" />
+    <Compile Include="Compiler\AssetBuilder.cs" />
+    <Compile Include="AST\ActionLayerDef.cs" />
+    <Compile Include="AST\ActorStmt.cs" />
+    <Compile Include="AST\ASTNode.cs" />
+    <Compile Include="AST\BackgroundStmt.cs" />
+    <Compile Include="AST\BreakStmt.cs" />
+    <Compile Include="AST\ContinueStmt.cs" />
+    <Compile Include="AST\Definition.cs" />
+    <Compile Include="AST\DialogStmt.cs" />
+    <Compile Include="AST\EchoStmt.cs" />
+    <Compile Include="AST\ExpressionStmt.cs" />
+    <Compile Include="AST\FunctionCallStmt.cs" />
+    <Compile Include="AST\FunctionDef.cs" />
+    <Compile Include="AST\IASTVisitor.cs" />
+    <Compile Include="AST\IfBlock.cs" />
+    <Compile Include="AST\IfStmt.cs" />
+    <Compile Include="AST\IncludeStmt.cs" />
+    <Compile Include="AST\LoopStmt.cs" />
+    <Compile Include="AST\MusicStmt.cs" />
+    <Compile Include="AST\MusicStopStmt.cs" />
+    <Compile Include="AST\MusicVolStmt.cs" />
+    <Compile Include="AST\ParameterDef.cs" />
+    <Compile Include="AST\PlotDef.cs" />
+    <Compile Include="AST\ReturnStmt.cs" />
+    <Compile Include="AST\SelectOption.cs" />
+    <Compile Include="AST\SelectStmt.cs" />
+    <Compile Include="AST\Statement.cs" />
+    <Compile Include="AST\SwitchCase.cs" />
+    <Compile Include="AST\SwitchStmt.cs" />
+    <Compile Include="Compiler\ASTChecker.cs" />
+    <Compile Include="Compiler\ContentChecker.cs" />
+    <Compile Include="Compiler\ExpressionParserKernel.cs" />
+    <Compile Include="Compiler\IDGenerator.cs" />
+    <Compile Include="Compiler\ParaStrProcessor.cs" />
+    <Compile Include="Expr\BoolConst.cs" />
+    <Compile Include="FireMLRoot.cs" />
+    <Compile Include="Compiler\ASTBuilder.cs" />
+    <Compile Include="Compiler\CompilerKernel.cs" />
+    <Compile Include="Compiler\ExpressionParser.cs" />
+    <Compile Include="Compiler\Translator.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="Expr\AddExpr.cs" />
+    <Compile Include="Expr\AndExpr.cs" />
+    <Compile Include="Expr\AssignExpr.cs" />
+    <Compile Include="Expr\BinaryAlgoExpr.cs" />
+    <Compile Include="Expr\BinaryCmpExpr.cs" />
+    <Compile Include="Expr\BinaryLogicExpr.cs" />
+    <Compile Include="Expr\DataType.cs" />
+    <Compile Include="Expr\DivExpr.cs" />
+    <Compile Include="Expr\EquExpr.cs" />
+    <Compile Include="Expr\Expression.cs" />
+    <Compile Include="Expr\FloatConst.cs" />
+    <Compile Include="Expr\GreatEquExpr.cs" />
+    <Compile Include="Expr\GreatExpr.cs" />
+    <Compile Include="Expr\IExprVisitor.cs" />
+    <Compile Include="Expr\IntConst.cs" />
+    <Compile Include="Expr\LeftValue.cs" />
+    <Compile Include="Expr\LeftValueExpr.cs" />
+    <Compile Include="Expr\LessEquExpr.cs" />
+    <Compile Include="Expr\LessExpr.cs" />
+    <Compile Include="Expr\MulExpr.cs" />
+    <Compile Include="Expr\NegativeExpr.cs" />
+    <Compile Include="Expr\NeqExpr.cs" />
+    <Compile Include="Expr\NotExpr.cs" />
+    <Compile Include="Expr\OrExpr.cs" />
+    <Compile Include="Expr\PowExpr.cs" />
+    <Compile Include="Expr\RightValue.cs" />
+    <Compile Include="Expr\RightValueExpr.cs" />
+    <Compile Include="Expr\StringConst.cs" />
+    <Compile Include="Expr\SubExpr.cs" />
+    <Compile Include="Expr\Value.cs" />
+    <Compile Include="Expr\VarRef.cs" />
+    <Compile Include="Runtime\ASTVisitor.cs" />
+    <Compile Include="Runtime\CallStack.cs" />
+    <Compile Include="Runtime\ExprProcessor.cs" />
+    <Compile Include="Runtime\RuntimeData.cs" />
+    <Compile Include="Runtime\RuntimeException.cs" />
+    <Compile Include="StrVarRefProcessor.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\ExpressionCalculator.cs" />
+    <Compile Include="Runtime\FormalScope.cs" />
+    <Compile Include="Runtime\FuncReturnBehavior.cs" />
+    <Compile Include="Runtime\IEngineFunctionCaller.cs" />
+    <Compile Include="Runtime\InstructionStack.cs" />
+    <Compile Include="Runtime\LocalScope.cs" />
+    <Compile Include="Runtime\RuntimeKernel.cs" />
+    <Compile Include="Runtime\Scope.cs" />
+    <Compile Include="Runtime\ScopeStack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram\AST.cd" />
+    <Content Include="FireMLLanguage\zh_cn.txt" />
+    <None Include="ClassDiagram\Compiler.cd" />
+    <None Include="ClassDiagram\Expression.cd" />
+    <None Include="ClassDiagram\Runtime.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FireEngine.ContentInterface\FireEngine.ContentInterface.csproj">
+      <Project>{9695925C-80C9-4857-8440-C8CE200A6C3D}</Project>
+      <Name>FireEngine.ContentInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FireEngine.FireMLData\FireEngine.FireMLData.csproj">
+      <Project>{B3A70DBB-5313-4D1C-8219-BB11C28315EC}</Project>
+      <Name>FireEngine.FireMLData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FireEngine.Library\FireEngine.Library.csproj">
+      <Project>{04339B90-FDDD-4B02-9D4B-CEBE6B0B57DD}</Project>
+      <Name>FireEngine.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

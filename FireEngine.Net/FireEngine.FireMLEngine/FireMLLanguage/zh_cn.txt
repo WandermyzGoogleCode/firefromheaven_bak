@@ -1,0 +1,73 @@
+﻿#FireML 简体中文字典
+#函数生成中的par和return怎么办？
+
+#Function
+Function	=	函数
+para		=	参数
+name		=	名字
+default		=	默认
+doc			=	文档
+parastr		=	参数串
+funcdef		=	函数定义
+
+#Definition
+ActionLayer	=	角色图层
+Position	=	位置
+
+#Statement
+expr		=	表达式
+br			=	换行
+return		=	返回
+include		=	包含
+SubPlot		=	子情节
+actor		=	角色
+par			=	参数
+img			=	图片
+asset		=	预定义
+avatar		=	头像
+avaasset	=	预定义头像
+layer		=	图层
+position	=	位置
+bg			=	背景
+echo		=	输出
+select		=	选择支
+option		=	选项
+value		=	值
+if			=	如果
+elseif		=	否则如果
+else		=	否则
+cond		=	条件
+switch		=	分支跳转
+case		=	情况
+value		=	值
+var			=	变量
+break		=	跳出
+continue	=	继续
+loop		=	循环
+music		=	音乐
+src			=	源
+fadeIn		=	淡入
+fadeOut		=	淡出
+musicStop	=	音乐停止
+musicVol	=	音乐音量
+amplitude	=	增益
+transition	=	过渡
+
+#
+MainPlot	=	主情节
+SubPlot		=	子情节
+
+#Asset
+Music		=	音乐资源
+title		=	标题
+artist		=	艺术家
+lyricsBy	=	作词
+musicBy		=	作曲
+description	=	描述
+lyrics		=	歌词
+lrc			=	LRC
+access		=	可见度
+
+CG			=	CG
+
+Video		=	视频

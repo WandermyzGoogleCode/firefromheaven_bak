@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FireEngine.GameEngine.Media.Geometry" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Geometry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.RectangleGeometry" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\RectangleGeometry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.Animation">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.Image" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.TextureImage" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\TextureImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.TransitionImage" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\TransitionImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.EffectImage" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\EffectImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.MapTransition" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\MapTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.OpacityTransition" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\OpacityTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.RandomMapTransition" Collapsed="true">
+    <Position X="3" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\RandomMapTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.Transition" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireEngine.GameEngine.Media.BufferedImage" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media\BufferedImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>
