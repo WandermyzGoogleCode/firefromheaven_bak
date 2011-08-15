@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <xs:include schemaLocation="FireMLTypes.xsd" />
+  <xs:group name="Function">
+    <xs:choice>
+      <xs:element name="solo" nillable="true">
+        <xs:annotation>
+          <xs:documentation>独白</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="tomoya" nillable="true">
+        <xs:annotation>
+          <xs:documentation>朋也</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="img" type="xs:string" default="">
+            <xs:annotation>
+              <xs:documentation>立绘，空值表示不显示立绘</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="girl" nillable="true">
+        <xs:annotation>
+          <xs:documentation>女孩</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nagisa" nillable="true">
+        <xs:annotation>
+          <xs:documentation>渚</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="img" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>渚的立绘</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="古河" type="xs:boolean" default="false">
+            <xs:annotation>
+              <xs:documentation>如果该项为true，则名字显示“古河”而不是“渚”</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MyNewFunc" nillable="true">
+        <xs:annotation>
+          <xs:documentation>最新的函数哦</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MyFunc" nillable="true">
+        <xs:annotation>
+          <xs:documentation>我的测试函数</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="a" type="xs:string" default="0">
+            <xs:annotation>
+              <xs:documentation>一个没用的变量</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="b" type="xs:string" default="1">
+            <xs:annotation>
+              <xs:documentation>啊啊啊</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="par" type="ActualParameters">
+            <xs:annotation>
+              <xs:documentation>参数字串：$a; $a,$b</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AnotherFunc" nillable="true">
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="英" nillable="true">
+        <xs:annotation>
+          <xs:documentation>英</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="img" type="xs:string" default="fa06nm">
+            <xs:annotation>
+              <xs:documentation>显示图片</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="avatar" type="xs:string" default="awr">
+            <xs:annotation>
+              <xs:documentation>头像</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="par" type="ActualParameters">
+            <xs:annotation>
+              <xs:documentation>参数字串：$img; $img, $avatar</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="伊娥" nillable="true">
+        <xs:annotation>
+          <xs:documentation>伊娥</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="showname" type="xs:string" default="伊娥" />
+          <xs:attribute name="img" type="xs:string" default="fa01wr" />
+          <xs:attribute name="avatar" type="xs:string" default="asm" />
+          <xs:attribute name="par" type="ActualParameters">
+            <xs:annotation>
+              <xs:documentation>参数字串：$showname; $showname, $img; $showname, $img, $avatar</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="黎" nillable="true">
+        <xs:annotation>
+          <xs:documentation>黎</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="showname" type="xs:string" default="黎" />
+          <xs:attribute name="img" type="xs:string" default="fa03nm" />
+          <xs:attribute name="avatar" type="xs:string" default="anm" />
+          <xs:attribute name="par" type="ActualParameters">
+            <xs:annotation>
+              <xs:documentation>参数字串：$showname; $showname, $img; $showname, $img, $avatar</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="小潘" nillable="true">
+        <xs:annotation>
+          <xs:documentation>小潘</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="showname" type="xs:string" default="潘多拉" />
+          <xs:attribute name="img" type="xs:string" default="fa01sd" />
+          <xs:attribute name="avatar" type="xs:string" default="anm" />
+          <xs:attribute name="par" type="ActualParameters">
+            <xs:annotation>
+              <xs:documentation>参数字串：$showname; $showname, $img; $showname, $img, $avatar</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="badend" nillable="true">
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="goodend" nillable="true">
+        <xs:complexType>
+          <xs:attribute name="return" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将返回值保存到某个变量中</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+</xs:schema>

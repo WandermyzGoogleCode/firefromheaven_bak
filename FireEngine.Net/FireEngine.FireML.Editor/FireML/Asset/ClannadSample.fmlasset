@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--请将此文件移动到工程的Content/FireML/Asset目录下-->
+<FireMLAsset xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <Music Name="1-04 町, 時の流れ, 人" src="music/music1.mp3" Access="FirstMeet">
+    <Title>町, 時の流れ, 人</Title>
+    <Artist>Shinji Orito, Magome Togoshi, Jun Maeda</Artist>
+  </Music>
+
+  <Music Name="1-05 渚" src="music/music2.mp3" Access="FirstMeet">  <!--access表示某个资源在Gallery中的行为，可以是第一次遇到时显示、始终隐藏或始终显示-->
+    <Title>渚</Title>
+    <Artist>Shinji Orito, Magome Togoshi, Jun Maeda</Artist>
+  </Music>
+
+  <CG Name="nagisa1_1" src="cg/nagisa1_1.jpg" Access="FirstMeet" Group="1"/>
+
+  <CG Name="nagisa1_2" src="cg/nagisa1_2.jpg" Access="FirstMeet" Group="1"/>
+
+  <CG Name="nagisa1_3" src="cg/nagisa1_3.jpg" Access="FirstMeet" Group="1"/>
+  
+</FireMLAsset>

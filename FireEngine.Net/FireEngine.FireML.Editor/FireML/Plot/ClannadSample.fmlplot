@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
+
+  <Function name="solo" doc="独白">   <!--函数名、函数的说明-->
+    <funcdef>                         <!--开始函数体-->
+      <actor/>                        <!--函数体中的语句-->
+    </funcdef>
+  </Function>
+
+  <Function name="tomoya" doc="朋也">
+    <para name="$img" doc="立绘，空值表示不显示立绘" default="" type="String"/>  <!--函数的参数-->
+    <funcdef>
+      <actor name="朋也" img="{$img}"/>   <!--img的值就是传入的参数-->
+    </funcdef>
+  </Function>
+
+  <Function name="girl" doc="女孩">
+    <funcdef>
+      <actor name="女孩"/>
+    </funcdef>
+  </Function>
+
+  <Function name="nagisa" doc="渚">   <!--为渚定义一个函数-->
+    <para name="$img" doc="渚的立绘" type="String"/>
+    <para name="$古河" type="Bool" default="false" doc="如果该项为true，则名字显示“古河”而不是“渚”"/> <!--在游戏前期，渚的名字会显示为“古河”，而后期会显示为“渚”，因此设置这样一个参数，并且设置默认值为显示“渚”-->
+    <funcdef>
+      <if cond="$古河">               <!--判断变量“$古河”是否为真-->
+        <expr>$name = "古河"</expr>   <!--如果为真，就让表示名字的变量“$name”的值为“古河”-->
+        <else/>
+        <expr>$name = "渚"</expr>     
+      </if>
+      <actor name="{$name}" img="char/nagisa/{$img}.png"/>  <!--在属性中可以嵌入变量（要用大括号包围）-->
+      <!--假设渚的所有立绘都存储在char/nagisa/下，且扩展名都是png，那么就没必要每次显示渚的立绘时都输入这么多的文件夹名和扩展名-->
+    </funcdef>
+  </Function>
+  
+  <SubPlot name="sample1">  <!--定义一个“子剧情”-->
+    <music src="music/music1.mp3"/>   <!--播放背景音乐-->
+    <actor/>  <!--用来显示人名、立绘和头像。什么都不写表示没有立绘、头像、人名什么的-->
+            我讨厌这座小镇  <!--对白用纯文本来表示-->
+            因为这里满是想要忘却的回忆 <!--换行表示要等待玩家点鼠标才到下一句对白-->
+    <bg img="bg/bg1.jpg"/>
+            每天去学校，听听课，与朋友们闲聊，然后回到根本不想回的家里
+            没有任何新鲜的事物
+    <actor name="朋也"/>（这样下去，会有什么改变吗…）
+                        （我的生活，今后会有什么改变吗？）
+    
+    <bg img="bg/bg2_sky_cloud.jpg"/>
+    <actor name="声音"/>唉…
+    <actor/>那是另一个人的叹息声。相比我而言，显得微弱而短促。
+            我看了看旁边。
+      
+    <music src="music/music2.mp3"/>
+    <bg img="cg/cg1_nagisa1.jpg"/>
+            那里有个女生，和我一样呆呆地站着。
+            看校徽的颜色，可以知道她也是三年级。
+            不过，是一张陌生的面孔。
+            披肩的短发，随着微风轻轻飘舞。
+    <actor name="女孩"/>……
+    <bg img="cg/cg1_nagisa2.jpg"/>
+                        嗯…嗯…
+                        ……
+    <bg img="cg/cg1_nagisa3.jpg"/>  
+                        你喜欢这所学校吗
+    <actor name="朋也"/>哎…？
+    <actor name="女孩"/>我非常非常地喜欢这里
+                        但是，所有的这一切…都在改变着
+                        不管是多么愉快的事，还是多么开心的事，所有这一切
+                        所有这一切，都在不断改变着
+    <actor/>她有些笨拙地说着
+    <actor name="女孩"/>即使这样，你还会永远喜欢这里吗？
+    <actor/>……
+    <actor name="女孩"/>我…
+    <actor name="朋也"/>只要能找到不就行了吗
+    <selectWithValue return="$dasfsad"> <!--变量必须以$开头-->
+      <option value="123"></option>  <!--XML语法错误，开始和结束不配对-->
+      <!--<actor/> selectWithValue中不能有actor-->
+    </selectWithValue>
+  </SubPlot>
+
+  <SubPlot name="sample2">
+    <music src="music/music1.mp3"/>
+    <solo/>  
+    我讨厌这座小镇
+    因为这里满是想要忘却的回忆
+    <bg img="bg/bg1.jpg"/>
+    每天去学校，听听课，与朋友们闲聊，然后回到根本不想回的家里
+    没有任何新鲜的事物
+    <tomoya/>（这样下去，会有什么改变吗…）
+    （我的生活，今后会有什么改变吗？）
+
+    <bg img="bg/bg2_sky_cloud.jpg"/>
+    <actor name="声音"/>唉…
+    <solo/>那是另一个人的叹息声。相比我而言，显得微弱而短促。<!--调用刚才定义的函数-->
+    我看了看旁边。
+
+    <music src="music/music2.mp3"/>     <!--（放音乐）-->
+    <bg img="cg/cg1_nagisa1.jpg"/>
+    那里有个女生，和我一样呆呆地站着。
+    看校徽的颜色，可以知道她也是三年级。
+    不过，是一张陌生的面孔。
+    披肩的短发，随着微风轻轻飘舞。
+    <girl/>……
+    <bg img="cg/cg1_nagisa2.jpg"/>
+    嗯…嗯…
+    ……
+    <bg img="cg/cg1_nagisa3.jpg"/>
+    你喜欢这所学校吗                          <!--女孩：你喜欢这所学校吗？-->
+    <tomoya/>哎…？                           <!--朋也：哎…？-->
+    <girl/>我非常非常地喜欢这里               <!--女孩：我非常非常地喜欢这里-->
+          但是，所有的这一切…都在改变着      <!--      但是，所有的这一切…都在改变着-->
+          不管是多么愉快的事，还是多么开心的事，所有这一切
+          所有这一切，都在不断改变着
+    <solo/>她有些笨拙地说着
+    <girl/>即使这样，你还会永远喜欢这里吗？
+    <solo/>……
+    <girl/>我…
+    <tomoya/>只要能找到不就行了吗
+  </SubPlot>
+
+  <SubPlot name="sample3">
+    <music asset="1-04 町, 時の流れ, 人"/>
+    <music asset="1-05 渚"/>
+    <bg asset="nagisa1_1"/>
+    <bg asset="nagisa1_2"/>
+    <bg asset="nagisa1_3"/>
+  </SubPlot>
+
+  <!--
+  <子情节 名字="示例4">
+    <音乐 预设="1-04 町, 時の流れ, 人"/>
+    <独白/> 
+    我讨厌这座小镇
+    因为这里满是想要忘却的回忆
+    <背景 图="bg/bg1.jpg"/>
+    每天去学校，听听课，与朋友们闲聊，然后回到根本不想回的家里
+    没有任何新鲜的事物
+    <朋也/>（这样下去，会有什么改变吗…）
+    （我的生活，今后会有什么改变吗？）
+
+    <背景 图="bg/bg2_sky_cloud.jpg"/>
+    <角色 名字="声音"/>唉…
+    <独白/>那是另一个人的叹息声。相比我而言，显得微弱而短促。
+    我看了看旁边。
+
+    <音乐 预设="1-05 渚"/>
+    <背景 预设="渚1_1"/>
+    那里有个女生，和我一样呆呆地站着。
+    看校徽的颜色，可以知道她也是三年级。
+    不过，是一张陌生的面孔。
+    披肩的短发，随着微风轻轻飘舞。
+    <女孩/>……
+    <背景 预设="渚1_2"/>
+    嗯…嗯…
+    ……
+    <背景 预设="渚1_3"/>
+    你喜欢这所学校吗
+    <女孩/>哎…？
+    <女孩/>我非常非常地喜欢这里
+    但是，所有的这一切…都在改变着
+    不管是多么愉快的事，还是多么开心的事，所有这一切
+    所有这一切，都在不断改变着
+    <独白/>她有些笨拙地说着
+    <女孩/>即使这样，你还会永远喜欢这里吗？
+    <独白/>……
+    <女孩/>我…
+    <朋也/>只要能找到不就行了吗
+  </子情节>
+  -->
+
+   
+  <SubPlot name="variable">
+    <tomoya/> 我有个问题
+    <solo/>   我装作新生的样子，举手提问
+    <nagisa img="微笑" 古河="true"/>好的，请问  <!--这里显示出的立绘是“char/nagisa/微笑.png”-->
+    
+    <select return="$问题">                     <!--选择框-->
+      会演怎样的话剧呢？                        <!--如果玩家选择第一个选项，则“$问题”的值将为0，以此类推-->
+      海报上画的是什么东西？
+      你喜欢哪种类型的男生？
+    </select>
+   
+    <switch expr="$问题">                       <!--分支跳转-->
+      <case value="0">
+        <tomoya/>会演怎样的话剧呢？
+        <solo/>虽说都是话剧，但却也种类繁多…大概。
+      </case>
+      <case value="1">
+        <tomoya/>海报上画的是什么东西？
+        <solo/>我想这绝对会被问到的，所以不能坐视不管。
+      </case>
+      <case value="2">
+        <solo/>也可能会有人要开她的玩笑，那该怎么回答呢？
+        <tomoya/>你喜欢哪种类型的男生？
+      </case>
+    </switch>
+    
+  </SubPlot>
+  
+</FireML>

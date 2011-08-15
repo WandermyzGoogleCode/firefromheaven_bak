@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <xs:include schemaLocation="FireMLTypes.xsd"/>
+  <xs:include schemaLocation="FireMLFuncExt.xsd"/>
+  <xs:include schemaLocation="FireMLAssetExt.xsd"/>
+  <xs:include schemaLocation="FireMLDataExt.xsd"/>
+  
+  <!--Global Definitions-->
+  <xs:group name="GlobalDefinition">
+    <xs:choice>
+      <xs:element name="Function">
+        <xs:annotation>
+          <xs:documentation>
+            定义一个函数
+          </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="para" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>
+                  定义一个函数的入口参数
+                </xs:documentation>
+              </xs:annotation>
+
+              <xs:complexType>
+                <xs:attribute name="name" type="VarRef" use="required">
+                  <xs:annotation>
+                    <xs:documentation>参数名，以$开头</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="default" type="xs:string" use="optional">
+                  <xs:annotation>
+                    <xs:documentation>当调用函数时未指定该值时的默认值，可以不定义</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="type" type="ParameterType" default="Auto" use="optional">
+                  <xs:annotation>
+                    <xs:documentation>参数的类型，如果不指定则默认为Auto类型</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="doc" type="xs:string">
+                  <xs:annotation>
+                    <xs:documentation>
+                      参数的说明，用来显示在编辑器的“自动完成”提示中。
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+
+            <xs:element name="parastr" type="FormalParameters" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>参数表字符串，写参数名列表，逗号分隔</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+
+            <xs:element name="funcdef" minOccurs="1" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>函数的内容</xs:documentation>
+              </xs:annotation>
+
+              <xs:complexType mixed="true">
+                <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:complexType>
+            </xs:element>
+
+          </xs:sequence>
+
+
+          <xs:attribute name="name" type="xs:NCName" use="required">
+            <xs:annotation>
+              <xs:documentation>
+                函数的名字，不能是已存在的节点名。
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+
+          <xs:attribute name="doc" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                函数的说明，用来显示在编辑器的“自动完成”提示中。
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+
+        </xs:complexType>
+
+      </xs:element>
+
+
+      <xs:element name="ActionLayer">
+        <xs:annotation>
+          <xs:documentation>
+            角色图层定义
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+
+          <xs:attribute name="name" use="required" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                图层名字，必须是唯一的
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+
+          <xs:attribute name="position" use="required" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                角色位置
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+
+  <!--Content Elements-->
+  <xs:group name="MainContent">
+    <xs:choice>
+
+      <xs:element name="expr" type="ExpressionBlock">
+        <xs:annotation>
+          <xs:documentation>执行表达式。多个表达式用;分隔</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="br" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+            换行（回车）表示换下一屏（即用户需要点一次鼠标后才会显示到下一行）。如果想在同一屏内换行则在行尾加<br/>
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType/>
+      </xs:element>
+
+      <xs:element name="return" nillable="true" type="Expression">
+        <xs:annotation>
+          <xs:documentation>将一个表达式作为结果返回</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="include" nillable="true">
+        <xs:annotation>
+          <xs:documentation>
+            将一个子情节包含到当前位置
+          </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+          <xs:attribute name="SubPlot" type="SubPlotName"  use="required">
+            <xs:annotation>
+              <xs:documentation>
+                子情节的名字
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="actor">
+        <xs:annotation>
+          <xs:documentation>
+            <![CDATA[
+              指定当前要显示的角色名字、立绘、头像等
+              <actor name = "英" img = "img/in/in_fa06nm.png" layer = "0"/>
+              这是旁白
+              <actor />
+              这句话是英说的
+              <actor para = "英, img/in/in_fa06nm.png, 0"/>
+            ]]>
+          </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+          <!--
+          <xs:attribute name="par" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[
+                参数字串：
+                $name, $img, $layer；
+	              $name, $img, $avatar, $layer；
+                ]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          -->
+          <xs:attribute name="name" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>角色的名字，会显示在名字框内。不定义则不显示名字。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="img" type="ActorContentRef">
+            <xs:annotation>
+              <xs:documentation>角色的立绘文件。不定义则不显示立绘。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="asset" type="ActorAssetRef">
+            <xs:annotation>
+              <xs:documentation>预定义的角色立绘</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="avatar" type="ActorContentRef">
+            <xs:annotation>
+              <xs:documentation>角色头像。不定义则不显示头像。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="avaasset" type="ActorAssetRef">
+            <xs:annotation>
+              <xs:documentation>预定义的角色头像</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="layer" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>图层。若position已定义则忽略layer的位置设置。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="position" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>位置。如不定义则使用layer的位置设置，若layer也不定义则使用默认。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="bg" nillable="true">
+        <xs:annotation>
+          <xs:documentation>显示背景</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="img" type="CGContentRef">
+            <xs:annotation>
+              <xs:documentation>图片文件</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="asset" type="CGAssetRef">
+            <xs:annotation>
+              <xs:documentation>预定义背景（包括CG）</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <!--
+          <xs:attribute name="par" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[
+                  参数字串：
+                  $img
+                ]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          -->
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="echo" type="Expression">
+        <xs:annotation>
+          <xs:documentation>输出表达式，会作为单独的一个对白。如果要在对话中嵌入变量，请使用{$varname}</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="select">
+        <xs:annotation>
+          <xs:documentation>
+            简化的选项菜单；
+            直接写选项名，每行一个；其对应的值分别为0，1，2，...
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+          <xs:attribute name="return" use="required" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将结果存入result指定的变量</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      
+      <xs:element name="selectWithValue">
+        <xs:annotation>
+          <xs:documentation>
+            选项菜单
+          </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="option" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>表示一个选项</xs:documentation>
+              </xs:annotation>
+              <xs:complexType mixed="true">
+                <xs:attribute name="value" type="xs:string">
+                  <!--type待定！-->
+                  <xs:annotation>
+                    <xs:documentation>该选项对应的值</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+
+          <xs:attribute name="return" use="required" type="VarRef">
+            <xs:annotation>
+              <xs:documentation>将结果存入result指定的变量</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="if">
+        <xs:annotation>
+          <xs:documentation>条件判断</xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="elseif" nillable="true">
+                <xs:annotation>
+                  <xs:documentation>否则</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:attribute name="cond" type="Expression" use="required">
+                    <xs:annotation>
+                      <xs:documentation>判断条件</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+            <xs:element name="else" nillable="true" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>否则</xs:documentation>
+              </xs:annotation>
+              <xs:complexType/>
+            </xs:element>
+            <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+          <xs:attribute name="cond" type="Expression" use="required">
+            <xs:annotation>
+              <xs:documentation>判断条件，一个返回真/假的布尔表达式</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+
+      <xs:element name="switch">
+        <xs:annotation>
+          <xs:documentation>分支跳转</xs:documentation>
+        </xs:annotation>
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="case" minOccurs="1" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>表示一种情况</xs:documentation>
+              </xs:annotation>
+              <xs:complexType mixed="true">
+                <xs:group minOccurs="0" maxOccurs="unbounded" ref="MainContent"/>
+                <xs:attribute name="value" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>该情况对应的值</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="default" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>没有值对应的情况</xs:documentation>
+              </xs:annotation>
+              <xs:complexType mixed="true">
+                <xs:group minOccurs="0" maxOccurs="unbounded" ref="MainContent"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="expr" type="Expression" use="required">
+            <xs:annotation>
+              <xs:documentation>用于分支判断的表达式</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="break" nillable="true">
+        <xs:annotation>
+          <xs:documentation>继续下一轮循环</xs:documentation>
+        </xs:annotation>
+        <xs:complexType/>
+      </xs:element>
+      
+      <xs:element name="continue" nillable="true">
+        <xs:annotation>
+          <xs:documentation>跳出循环</xs:documentation>
+        </xs:annotation>
+        <xs:complexType/>
+      </xs:element>
+
+
+      <xs:element name="loop">
+        <xs:annotation>
+          <xs:documentation>循环</xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:attribute name="cond" type="Expression" use="required">
+            <xs:annotation>
+              <xs:documentation>当cond的值为真时执行循环。否则停止循环。</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="music" nillable="true">
+        <xs:annotation>
+          <xs:documentation>播放或停止播放音乐</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="src" type="MusicContentRef">
+            <xs:annotation>
+              <xs:documentation>音乐文件</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="asset" type="MusicAssetRef">
+            <xs:annotation>
+              <xs:documentation>预定义音乐文件</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="loop" type="xs:boolean" default="true">
+            <xs:annotation>
+              <xs:documentation>是否循环；不设置则按默认值处理</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="fadeIn" type="xs:decimal" default="0">
+            <xs:annotation>
+              <xs:documentation>淡入持续时间，以秒为单位，可以是小数；不设置则没有淡入效果</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <!--TODO: 处理两首曲子之间的切换！-->
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="musicStop" nillable="true">
+        <xs:annotation>
+          <xs:documentation>停止播放音乐</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="fadeOut" type="xs:decimal" default="0">
+            <xs:annotation>
+              <xs:documentation>淡入持续时间，以秒为单位，可以是小数；不设置则没有淡入效果</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="musicVol" nillable="true">
+        <xs:annotation>
+          <xs:documentation>音乐音量控制</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="amplitude" type="xs:decimal" default="1">
+            <xs:annotation>
+              <xs:documentation>音量增益<!--详细说明--></xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="transition" type="xs:decimal" default="0">
+            <xs:annotation>
+              <xs:documentation>音量过渡时间，以秒为单位；不设置则没有过渡效果</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:group ref="Function" minOccurs="0"/>
+
+    </xs:choice>
+  </xs:group>
+
+  <!--FireML-->
+  <xs:element name="FireML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="GlobalDefinition" minOccurs="0" maxOccurs="unbounded"/>
+
+        <xs:element name="MainPlot" minOccurs="0" maxOccurs="1">
+          <xs:complexType mixed="true">
+            <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="SubPlot" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType mixed="true">
+            <xs:group ref="MainContent" minOccurs="0" maxOccurs="unbounded"/>
+
+            <xs:attribute name="name" type="xs:string" use="required">
+              <xs:annotation>
+                <xs:documentation>
+                  子情节的名字，供“包含”调用
+                </xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+
+
+  
+</xs:schema>

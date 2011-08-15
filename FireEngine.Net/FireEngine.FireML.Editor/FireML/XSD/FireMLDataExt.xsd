@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jianyingstudio.org/schemas/FireML" xmlns="http://www.jianyingstudio.org/schemas/FireML">
+  <xs:include schemaLocation="FireMLTypes.xsd"/>
+  
+  <!--
+FireMLDataBase
+-->
+  <xs:complexType name="FireMLDataBase" abstract="true" />
+  <!--
+PositionData
+-->
+  <xs:complexType name="PositionData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FireMLDataBase">
+        <xs:attribute name="X" type="xs:int" use="required" />
+        <xs:attribute name="Y" type="xs:int" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+AssetDataBase
+-->
+  <xs:complexType name="AssetDataBase" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FireMLDataBase">
+        <xs:attribute name="Name" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>资源的名称（用于在脚本中引用）</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="Access" type="AssetAccess">
+          <xs:annotation>
+            <xs:documentation>资源文件是否显示在Gallery中，默认为Hidden</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AssetAccess">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hidden">
+        <xs:annotation>
+          <xs:documentation>从不显示在Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FirstMeet">
+        <xs:annotation>
+          <xs:documentation>第一次出现后加入Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Always">
+        <xs:annotation>
+          <xs:documentation>始终在Gallery中</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+ActorAsset
+-->
+  <xs:complexType name="ActorAsset">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssetDataBase">
+        <xs:attribute name="Group" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              为立绘资源指定一个组<!--作用待定-->
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="src" type="ActorContentRef">
+          <xs:annotation>
+            <xs:documentation>资源文件的位置</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+VideoAsset
+-->
+  <xs:complexType name="VideoAsset">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssetDataBase">
+        <xs:attribute name="src" type="VideoContentRef" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+CGAsset
+-->
+  <xs:complexType name="CGAsset">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssetDataBase">
+        <xs:attribute name="Group" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              为CG指定一个组；属于同一个组的CG将在Gallery中显示为同一项。<!--作用待定-->
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="src" type="CGContentRef">
+          <xs:annotation>
+            <xs:documentation>资源文件的位置</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+MusicAsset
+-->
+  <xs:complexType name="MusicAsset">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssetDataBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>音乐标题</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="Artist" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>艺术家</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="LyricsBy" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>作词</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="MusicBy" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>作曲</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>描述</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="Lyrics" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>歌词（纯文本）</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="1" name="LRC" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>LRC信息</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="src" type="MusicContentRef">
+          <xs:annotation>
+            <xs:documentation>为音乐资源指定一个组</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="Group" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>音乐标题</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

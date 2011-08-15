@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F74A6B6F-DADC-4EA7-8CF3-A4DCD17834AB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FireEngine.FireML.Editor</RootNamespace>
+    <AssemblyName>FireEngine.FireML.Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FireML\Asset\ClannadSample.fmlasset" />
+    <None Include="FireML\Asset\FireMLAssetTester.fmlasset" />
+    <None Include="FireML\FireML.fml" />
+    <None Include="FireML\Plot\ClannadSample.fmlplot" />
+    <None Include="FireML\Plot\FireMLAtomTester.fmlplot" />
+    <None Include="FireML\Plot\FireMLFuncTester.fmlplot" />
+    <None Include="FireML\XSD\FireML.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FireML\XSD\FireMLAsset.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FireML\XSD\FireMLAssetExt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FireML\XSD\FireMLDataExt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FireML\XSD\FireMLFuncExt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FireML\XSD\FireMLTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FireEngine.ContentInterface\FireEngine.ContentInterface.csproj">
+      <Project>{9695925C-80C9-4857-8440-C8CE200A6C3D}</Project>
+      <Name>FireEngine.ContentInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FireEngine.FireMLEngine\FireEngine.FireMLEngine.csproj">
+      <Project>{E27CC161-1475-45D9-BF96-2251B445FE84}</Project>
+      <Name>FireEngine.FireMLEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo FireML Assembly File - FireEngine &gt; $(ProjectDir)FireML\FireML.fml
+$(SolutionDir)\FireEngine.Utilities.FuncXSDGenerator\bin\Debug\FireEngine.Utilities.FuncXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLFuncExt.xsd $(ProjectDir)\FireML\
+$(SolutionDir)\FireEngine.Utilities.AssetXSDGenerator\bin\Debug\FireEngine.Utilities.AssetXSDGenerator.exe $(ProjectDir)\FireML\XSD\FireMLAssetExt.xsd $(ProjectDir)\FireML\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

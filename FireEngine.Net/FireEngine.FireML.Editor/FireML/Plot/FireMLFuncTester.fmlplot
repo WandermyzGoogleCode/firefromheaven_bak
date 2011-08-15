@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FireML xmlns="http://www.jianyingstudio.org/schemas/FireML">
+
+  <Function name="MyNewFunc" doc="最新的函数哦">
+    <funcdef>
+      Hello New World!
+    </funcdef>
+  </Function>
+  
+  <Function name="MyFunc" doc="我的测试函数">
+    <para name="$a" default="0" doc="一个没用的变量"/>
+    <para name="$b" default="1" doc="啊啊啊"/>
+    <parastr>$a</parastr>
+    <parastr>$a,$b</parastr>
+    <funcdef>
+      Hello Function!
+      <echo>$a</echo>
+      <return>$a</return>
+    </funcdef>
+  </Function>
+  <Function name="AnotherFunc">
+    <funcdef>
+      Hello~~~
+    </funcdef>
+  </Function>
+
+  <Function name = "英" doc="英">
+    <para name = "$img" default = "fa06nm" doc="显示图片"/>
+    <para name = "$avatar" default = "awr" doc="头像"/>
+    <parastr>$img</parastr>
+    <parastr>$img, $avatar</parastr>
+    <funcdef>
+      <expr>
+        $imgStr = "test2/in_" + $img + ".png";
+        $avatarStr = "test2/e_in_" + $img + ".png";
+      </expr>
+      <actor name = "英" img = "{$imgStr}" avatar = "{$avatarStr}"/>
+    </funcdef>
+  </Function>
+
+  <Function name = "伊娥" doc="伊娥">
+    <para name = "$showname" default = "伊娥"/>
+    <para name = "$img" default = "fa01wr"/>
+    <para name = "$avatar" default = "asm"/>
+    <parastr>$showname</parastr>
+    <parastr>$showname, $img</parastr>
+    <parastr>$showname, $img, $avatar</parastr>
+    <funcdef>
+      <expr>
+        $imgStr = "test2/io_" + $img + ".png";
+        $avatarStr = "test2/e_io_" + $img + ".png";
+      </expr>
+      <actor name = "{$showname}" img = "{$imgStr}" avatar = "{$avatarStr}"/>
+    </funcdef>
+  </Function>
+
+  <Function name = "黎" doc="黎">
+    <para name = "$showname" default = "黎"/>
+    <para name = "$img" default = "fa03nm"/>
+    <para name = "$avatar" default = "anm"/>
+    <parastr>$showname</parastr>
+    <parastr>$showname, $img</parastr>
+    <parastr>$showname, $img, $avatar</parastr>
+    <funcdef>
+      <expr>
+        $imgStr = "test2/li_" + $img + ".png";
+        $avatarStr = "test2/e_li_" + $img + ".png";
+      </expr>
+      <actor name = "{$showname}" img = "{$imgStr}" avatar = "{$avatarStr}"/>
+    </funcdef>
+  </Function>
+
+  <Function name = "小潘" doc="小潘">
+    <para name = "$showname" default = "潘多拉"/>
+    <para name = "$img" default = "fa01sd"/>
+    <para name = "$avatar" default = "anm"/>
+    <parastr>$showname</parastr>
+    <parastr>$showname, $img</parastr>
+    <parastr>$showname, $img, $avatar</parastr>
+    <funcdef>
+      <expr>
+        $imgStr = "test2/sc_" + $img + ".png";
+        $avatarStr = "test2/e_sc_" + $img + ".png";
+      </expr>
+      <actor name = "{$showname}" img = "{$imgStr}" avatar = "{$avatarStr}"/>
+    </funcdef>
+  </Function>
+
+  <Function name = "badend">
+    <funcdef>
+      Bad End!
+    </funcdef>
+  </Function>
+
+  <Function name = "goodend">
+    <funcdef>
+      Good End!
+    </funcdef>
+  </Function>
+</FireML>
